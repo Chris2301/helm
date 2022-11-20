@@ -1,0 +1,12 @@
+nginx-ingress:
+  hosts:
+    - host: project.k8s.com
+      paths:
+        - path: /api/
+          backend:
+            serviceName: project-backend
+            servicePort: 8080
+        - path: /
+          backend:
+            serviceName: project-ui
+            servicePort: 8080
